@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: hello-world-app
+    destination: /opt/hello-world-app
+hooks:
+  ApplicationStop:
+    - location: scripts/stop.sh
+      timeout: 10
+      runas: root
+  ApplicationStart:
+    - location: scripts/start.sh
+      timeout: 10
+      runas: root
