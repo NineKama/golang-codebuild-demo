@@ -11,5 +11,7 @@ phases:
 artifacts:
   files:
     - hello-world-app
+    - appspec.yml
+    - scripts/**
   base-directory: $CODEBUILD_SRC_DIR
   discard-paths: no
